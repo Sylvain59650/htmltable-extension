@@ -14,7 +14,7 @@
 
 <div>
 <p>
-This package htmltable-extension is a fork of [ag-Grid community](https://www.ag-grid.com/) (MIT) 
+This package htmltable-extension is a fork of <a href="https://www.ag-grid.com/">ag-Grid community</a> (MIT) 
 created for a more compact and faster distribution on the net.
 </p>
 <p>
@@ -24,7 +24,8 @@ ag-Grid is a fully-featured and highly customizable JavaScript data grid. It del
 </div>
 
 
-<img src="" />
+<img src="https://sylvain59650.github.io/htmltable-extension/github-grid-demo.jpg" />
+ 
  [Documentation](https://www.ag-grid.com/documentation-main/documentation.php)
 
 
@@ -71,7 +72,7 @@ Usage Overview
 
 #### Install 
 
-    npm install htmltable-extension --save
+	npm install htmltable-extension --save
 
     yarn add htmltable-extension --save
 
@@ -122,9 +123,7 @@ Asking Questions
 Look for similar problems on [StackOverflow](https://stackoverflow.com/questions/tagged/ag-grid) using the `ag-grid` tag. If nothing seems related, post a new message there. Do not use GitHub issues to ask questions.
 
 
-## Quick DEMO
-
-
+<a href="https://sylvain59650.github.io/htmltable-extension/demo/index.html">Quick DEMO</a>
 
 ## License
 MIT

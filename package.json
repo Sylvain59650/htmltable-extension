@@ -1,0 +1,51 @@
+{
+  "name": "htmltable-extension",
+  "version": "0.0.1",
+  "description": "ag-grid community edition for production",
+  "main": "./dist/htmltable-extension.min.js",
+  "scripts": {
+    "test": "exit 0"
+  },
+  "keywords": [
+    "ag-grid community","grid","table","spreadsheet",
+    "datatable",
+    "front-end"
+  ],
+  "author": "sylvain59",
+  "maintainers": [
+    {
+      "name": "sylvain59",
+      "email": "slongepee@laposte.net"
+    }
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sylvain59650/htmltable-extension.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ag-grid/ag-grid/issues"
+  },
+  "homepage": "https://github.com/Sylvain59650/htmltable-extension#readme",
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-plugin-remove-comments": "^2.0.0",
+    "babel-plugin-rename-umd-globals": "^1.0.0",
+    "babel-plugin-transform-es2015-modules-umd": "^6.24.1",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-es2017": "^6.24.1",
+    "browser-sync": "^2.23.6",
+    "eslint": "^4.19.1",
+    "gulp": "^3.9.1",
+    "gulp-babel": "^7.0.1",
+    "gulp-clean": "^0.4.0",
+    "gulp-clean-css": "^3.9.3",
+    "gulp-concat": "^2.6.1",
+    "gulp-csso": "^3.0.1",
+    "gulp-debug": "^3.2.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-uglify": "^3.0.1",
+    "gulp-watch": "^5.0.0"
+  }
+}

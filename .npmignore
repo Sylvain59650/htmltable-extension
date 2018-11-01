@@ -1,0 +1,10 @@
+node_modules/
+docs/
+tests/
+sources/
+.vscode
+gulpfile.js
+.eslintrc.json
+.gitignore
+.vscode/
+package-lock*

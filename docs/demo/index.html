@@ -1,0 +1,84 @@
+<html>
+
+<head>
+  <script src="https://cdn.jsdelivr.net/npm/htmlelement-extension@0.8.13/distrib/htmlElement.min.js"></script>
+  <!-- <script src="https://cdn.jsdelivr.net/npm/htmlelement-events-extension@0.9.10/distrib/htmlElement-events.min.js"></script> -->
+
+  <script src="htmlElement-events.min.js"></script>
+
+  <link rel="stylesheet" type="text/css" href="modules/htmltable-extension/dist/css/ag-grid.css" />
+  <script src="modules/htmltable-extension/dist/js/htmltable-extension.min.js"></script>
+</head>
+
+<body>
+  <div>
+    <a href="https://www.npmjs.com/package/htmltable-extension" title="NPM">
+      <img src="https://sylvain59650.github.io/demonstrator/img/npm.png" height="32"></a>
+    <a href="https://github.com/Sylvain59650/htmltable-extension" title="GitHub"><img src="https://github.com/favicon.ico" height="32" /></a>
+  </div>
+
+
+
+  <style>
+    .container {
+      margin-left: 100px;
+      margin-right: 50px;
+    }
+  </style>
+
+  <div class="container">
+    <select id="theme">
+    <option value="balham">balham</option>
+    <option value="balham-dark">balham-dark</option>
+    <option value="blue">blue</option>
+    <option value="bootstrap">bootstrap</option>
+    <option value="dark">dark</option>
+    <option value="fresh">fresh</option>
+    <option value="material">material</option>
+   </select>
+    <br/>
+
+    <div id="myGrid" style="height: 80%" class="ag-theme-dark"></div>
+  </div>
+
+  <script>
+    document.ready(function() {
+      let myGrid = qsi('myGrid');
+
+      qsi("theme").on("change", function() {
+        qsa("body>link[href*='ag-theme-']").remove();
+        var them = "ag-theme-" + qsi("theme").val();
+        var style = "modules/htmltable-extension/dist/css/" + them + ".css";
+        document.getStyles([style]);
+        myGrid.removeClass("ag-theme-balham ag-theme-balham-dark ag-theme-blue ag-theme-bootstrap ag-theme-dark ag-theme-fresh ag-theme-material");
+        myGrid.addClass(them);
+      });
+
+      qsi("theme").trigger("change");
+    });
+
+
+
+    const gridOptions = {
+      columnDefs: [{
+        headerName: 'Code',
+        field: 'ISO3166'
+      }, {
+        headerName: 'Country',
+        field: 'Name'
+      }],
+      enableSorting: true,
+      enableFilter: true,
+      pagination: true,
+      paginationPageSize: 20
+        // paginationAutoPageSize: true
+    };
+
+    document.getJSON("https://datarefs.lesprojets.net/countryCtrl.php", function(data) {
+      gridOptions.rowData = data;
+      var grid = new agGrid.Grid(myGrid, gridOptions);
+    });
+  </script>
+</body>
+
+</html>
